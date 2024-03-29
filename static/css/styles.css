@@ -1,0 +1,269 @@
+/* Scroll bar styling */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 15px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background: #d24b34e1;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background: #f0f0f0;
+  transition: all 0.22s ease-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e4e4e4;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #e14b32;
+}
+
+/* General */
+
+button {
+  border:#442a2a25;
+  color: black !important;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.content {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.back {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border-radius: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  transition: 0.25s ease-out;
+}
+
+.red {
+  background-color: #E62117;
+}
+
+.black {
+  background-color: black;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.font {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-weight: 400;
+}
+
+.startpage-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.startpage {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.startpage-button {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  border-radius: 4px;
+  padding: 12px;
+  font-size: 11.5px;
+  transition: 0.22s ease-out !important;
+}
+
+.startpage-button:hover {
+  font-size: 101%;
+}
+
+.header{
+  font-size: 65px;
+  font-weight: 400;
+  box-shadow: 8px 3px 8px #00000010;
+  padding: 20px;
+  border-radius: 10px;
+  opacity: 1;
+  transition: 5s;
+}
+
+input:hover, button:hover {
+  filter: brightness(93%);
+  margin-left: 7px;
+}
+
+input:focus, button:focus {
+  filter: brightness(105%);
+  padding: 16px;
+}
+
+.description {
+  font-size: 14px;
+  padding: 0px;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  text-align: center;
+}
+
+/* Starting page */
+
+.prompt-body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 40vw;
+  transition: all 0.25s ease-out;
+}
+
+.prompt {
+  font-size: 18px;
+  text-align: center;
+}
+
+.input, .analyze-button {
+  transition: 0.25s ease-out;
+}
+
+.input {
+  margin-bottom: 10px;
+  margin-right: 20px;
+  width: 300px;
+  height: 30px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 5px 7px 20px rgba(0, 0, 0, 0.1);
+  color: black !important;
+}
+
+.analyze-button {
+  padding: 15px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  border: none;
+  margin-top: 50px;
+  border-radius: 50px;
+}
+
+/* Loading screen */
+
+.loading-screen {
+  transition: 1s ease-out;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  text-align: center;
+  color: #ffffff; /* Change text color to white */
+}
+
+.loading-screen p {
+  padding-top: 100px;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+}
+
+.loader {
+  border: 16px solid #ffffff;
+  border-radius: 50%;
+  border-top: 16px solid #e6ca12;
+  width: 200px;
+  height: 200px;
+  animation: spin 3s ease-in-out infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.startpage-container, .loading-screen, 
+.labels-list, .piechart {
+  transition: 1s ease-out;
+}
+
+/* Pie chart */
+
+.piechart { 
+  width: 50vmin;
+  height: 50vmin;
+  border-radius: 50%; 
+  z-index: 5000;
+}
+
+.piechart { 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+} 
+
+.labels-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  padding: 30px;
+  padding-left: 40px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  box-shadow: 11px 20px 20px 4px rgba(0, 0, 0, 0.1);
+}
+
+.labels-item {
+  font-size: 18px;
+  line-height: 2rem;
+}
+
+.error {
+  transition: 0.2s ease-out;
+  text-align: center;
+  max-width: 80vw;
+}

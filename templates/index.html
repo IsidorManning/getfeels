@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" class="red">
+<head>
+    <!-- META DATA -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- GOOGLE FONTS -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- IMPORTS & CUSTOMIZATION -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Getfeels</title>
+</head>
+<body>
+    <div id="content" class="content red">
+        <div class="startpage-container" id="startpage-container">
+            <div class="startpage red">
+
+                <h2 class="header font">Welcome To Getfeels</h2>
+
+                <div class="prompt-body">
+                    <p class="description font">
+                        This app allows you to retrive the mood of a certain youtuber's viewers by analyzing the 
+                        comments of their latest video. Getfeels accomplishes this task using Google's 
+                        Youtube API, in combination with sentiment analysis. The AI model used is the famous natural 
+                        language processing model, BERT. 
+                    </p>
+                </div>
+
+                <div id="form-container">
+                    <form id="input-form">
+                        <input class="input" type="text" id="channelNameInput" placeholder="Enter channel name">
+                        <button class="analyze-button" id="analyzeBtn">Analyze Comments</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="back" onclick="location.reload();">
+        Try Again
+    </button>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
