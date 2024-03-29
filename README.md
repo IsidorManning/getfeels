@@ -27,11 +27,11 @@ Here's an overview of the backend components:
 - Error Handling: Handles errors such as invalid channel names or no comments found.
 
 ### File Structure
-app.py: Main Flask application file containing routes and logic.
-static/: Directory containing static assets (JavaScript, CSS).
-templates/: HTML templates for rendering the frontend.
-bert_main.py: Script for BERT-based sentiment analysis (from a saved and trained model).
-bert_clf.py: Script for training and saving new models from scratch. This file would be executed if I want to improve the model in the future and deploy a better version with higher accuracy.
-preprocessing.py: Script for preprocessing input data (text documents) that will later on be fed into the BERT model. 
-utils.py: Utility functions used within the application such as getting a saved BERT model.
-youtube_api.py: Module for fetching comments from the YouTube Data API.
+- app.py: Main Flask application file containing routes and logic.
+- static/: Directory containing static assets (JavaScript, CSS).
+- templates/: HTML templates for rendering the frontend.
+- bert_main.py: Script for BERT-based sentiment analysis (from a saved and trained model).
+- bert_clf.py: Script for training and saving new models from scratch. This file would be executed if I want to improve the model in the future and deploy a better version with higher accuracy.
+- preprocessing.py: Script for preprocessing input data (text documents) that will later on be fed into the BERT model. 
+- utils.py: Utility functions used within the application such as getting a saved BERT model.
+- youtube_api.py: Module for fetching comments from the YouTube Data API.
